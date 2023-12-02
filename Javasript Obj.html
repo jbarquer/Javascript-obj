@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Personal Information Form</h2>
+
+<form action="/submit_form" method="post">
+    <label for="fname">First Name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last Name:</label><br>
+    <input type="text" id="lname" name="lname"><br>
+    <label for="age">Age:</label><br>
+    <input type="number" id="age" name="age" min="1"><br>
+    <label for="gender">Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br>
+    <label for="bdate">Birthdate:</label><br>
+    <input type="date" id="bdate" name="bdate"><br>
+    <label for="address">Address:</label><br>
+    <input type="text" id="address" name="address"><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br>
+    <input type="submit" value="Submit">
+</form>
+
+
+<p id="display"></p>
+<script>
+  function displayData() {
+   var firstname = document.getElementById("firstname").value;
+   var lastname = document.getElementById("lastname").value;
+   var age = document.getElementById("age").value;
+   var gender = document.getElementById("gender").value;
+   var birthdate = document.getElementById("birthdate").value;
+   var address = document.getElementById("address").value;
+   var email = document.getElementById("email").value;
+  
+   var displayString = "First Name: " + firstname + "<br>" +
+                         "Last Name: " + lastname + "<br>" +
+                         "Age: " + age + "<br>" +
+                         "Gender: " + gender + "<br>" +
+                         "Birthdate: " + birthdate + "<br>" +
+                         "Address: " + address + "<br>" +
+                         "Email Address: " + email;
+  
+   document.getElementById("display").innerHTML = displayString;
+  }
+  </script>
+
+</body>
+</html>
